@@ -28,7 +28,7 @@ weatherForm.addEventListener('submit', (e) => {
                 temperature.textContent = data.temp
                 celsius.textContent = '°C'
                 message2.textContent = 'Feels like ' + data.feelslike + '°C out with humidity ' 
-                + data.humidity + 'g/m³'
+                + data.humidity + '%'
             }
         })
     })
