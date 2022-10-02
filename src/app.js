@@ -39,7 +39,8 @@ app.get('/about', (req, res) => {
 app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help',
-        message: 'Help Message',
+        message: 'This is a weather app, input your location or address and search for the weather ' 
+        + 'and you\'ll be provided with the temperature and your location.',
         name: 'Mayank'
     })
 })
