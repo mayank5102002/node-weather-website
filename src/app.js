@@ -40,7 +40,7 @@ app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help',
         message: 'This is a weather app, input your location or address and search for the weather ' 
-        + 'and you\'ll be provided with the temperature and your location.',
+        + 'and you\'ll be provided with the temperature of your location and other such details.',
         name: 'Mayank'
     })
 })
@@ -72,7 +72,9 @@ app.get('/weather', (req, res) => {
                 latitude: latitude,
                 longitude: longitude,
                 location: place,
-                temp: forecastdata
+                temp: forecastdata.temp,
+                feelslike: forecastdata.feelslike,
+                humidity: forecastdata.humidity
             })
         })
     })
